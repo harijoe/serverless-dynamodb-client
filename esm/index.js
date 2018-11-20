@@ -8,7 +8,7 @@ class Index {
   get = async (entity, id) => {
     const { Item } = await dynamoDb
       .get({
-        TableName: process.env.DYNAMODB_TABLE,
+        TableName: this.table,
         Key: {
           id,
           entity,
@@ -30,21 +30,21 @@ class Index {
     }
     await dynamoDb
       .put({
-        TableName: process.env.DYNAMODB_TABLE,
+        TableName: this.table,
         Item: data,
       })
       .promise();
   }
   list = async entity => {
     const result = await dynamoDb.query({
-      TableName : process.env.DYNAMODB_TABLE,
+      TableName : this.table,
       KeyConditionExpression: "entity = :entity",
       ExpressionAttributeValues: {
         ":entity": entity,
       }
     }).promise()
 
-    return result
+    return result.Items
   }
   entity = entity => ({
     get: id => this.get(entity, id),
