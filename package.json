@@ -1,10 +1,13 @@
 {
   "name": "@harijoe/serverless-dynamodb-client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A dynamoDB wrapper for serverless",
-  "main": "index.js",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel esm --out-dir cjs",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,10 @@
   },
   "homepage": "https://github.com/harijoe/serverless-dynamodb-client#readme",
   "dependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
     "serverless-dynamodb-client": "0.0.2"
   }
 }

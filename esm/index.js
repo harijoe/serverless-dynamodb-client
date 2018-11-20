@@ -1,6 +1,6 @@
 import { doc as dynamoDb } from 'serverless-dynamodb-client';
 
-class DynamoDB {
+class Index {
   table = null
   constructor(table) {
     this.table = table
@@ -53,6 +53,6 @@ class DynamoDB {
   })
 };
 
-const dynamoDB = table => new DynamoDB(table)
+const dynamoDB = table => new Index(table)
 
-module.exports = dynamoDB;
+export default dynamoDB;
