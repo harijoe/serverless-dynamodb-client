@@ -55,4 +55,4 @@ class DynamoDB {
 
 const dynamoDB = table => new DynamoDB(table)
 
-export default dynamoDB;
+module.exports = dynamoDB;

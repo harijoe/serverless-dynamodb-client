@@ -1,6 +1,6 @@
 {
   "name": "@harijoe/serverless-dynamodb-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A dynamoDB wrapper for serverless",
   "main": "index.js",
   "scripts": {
