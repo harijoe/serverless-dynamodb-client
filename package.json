@@ -1,0 +1,26 @@
+{
+  "name": "@harijoe/serverless-dynamodb-client",
+  "version": "0.0.1",
+  "description": "A dynamoDB wrapper for serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harijoe/serverless-dynamodb-client.git"
+  },
+  "keywords": [
+    "serverless",
+    "dynamoDB"
+  ],
+  "author": "Julien Vallini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harijoe/serverless-dynamodb-client/issues"
+  },
+  "homepage": "https://github.com/harijoe/serverless-dynamodb-client#readme",
+  "dependencies": {
+    "serverless-dynamodb-client": "0.0.2"
+  }
+}
